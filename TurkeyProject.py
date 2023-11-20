@@ -1,18 +1,18 @@
 while True:
     month = int(input("What # month is it? 1-12 "))
-    if month > 12:
+    if month > 12 or month<1:
         print("Enter a valid month: ")
     else:
         day = int(input("What day is it? 1-31 "))
-        if month <= 7 and month%2!=0 and day > 31:
+        if month <= 7 and month%2!=0 and day > 31 or day < 1:
             print("Enter a valid date: ")
-        elif month <= 7 and month%2==0 and day > 30 and month != 2:
+        elif month <= 7 and month%2==0 and day > 30 or day < 1 and month != 2:
             print("Enter a valid date: ")
-        elif month == 2 and day > 28:
+        elif month == 2 and day > 28 or day < 1:
             print("Enter a valid date: ")
-        elif month > 7 and month%2 == 0 and day > 31:
+        elif month > 7 and month%2 == 0 and day > 31 or day < 1:
             print("Enter a valid date: ")
-        elif month > 7 and month%2 != 0 and day > 30:
+        elif month > 7 and month%2 != 0 and day > 30 or day < 1:
             print("Enter a valid date: ")
         else:
             output = ""
